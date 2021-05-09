@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EGO.Fractal" Version="1.0.0" />
+    <PackageReference Include="EGO.SolidUI" Version="1.0.0" />
+    <PackageReference Include="IconLib" Version="0.74.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Hook.Framework">
+      <HintPath>..\..\..\References\Hook\Hook.Framework\bin\Debug\Hook.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
