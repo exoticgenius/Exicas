@@ -29,16 +29,13 @@ namespace EGO.EXICAS
             set
             {
                 _cache = value;
-                Task.Run(() =>
+                using (MemoryStream m = new MemoryStream())
                 {
-                    using (MemoryStream m = new MemoryStream())
-                    {
-                        value.Save(m, value.RawFormat);
+                    value.Save(m, value.RawFormat);
 
-                        string base64String = Convert.ToBase64String(m.ToArray());
-                        this.SetFeature(0, base64String);
-                    }
-                });
+                    string base64String = Convert.ToBase64String(m.ToArray());
+                    this.SetFeature(0, base64String);
+                }
             }
         }
 

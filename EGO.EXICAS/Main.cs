@@ -136,6 +136,7 @@ namespace EGO.EXICAS
             {
                 path = GetNewSavePath();
                 if (path is null) return;
+                Core.CurrentCollection.LastSaveLocation = path;
             }
             else path = Core.CurrentCollection.LastSaveLocation;
 
